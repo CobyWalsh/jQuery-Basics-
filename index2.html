@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+<header>
+    <img id="menu-toggle" src="img/menu" alt="dummy menu">
+</header>
+
+<nav id="side-nav">
+    <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">My channel</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Subscribtions</a></li>
+    </ul>
+    <ul>
+        <li><p>LIBRARY</p></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Watch Later</a></li>
+        <li><a href="#">Purchases</a></li>
+        <li><a href="#">jQuery</a></li>
+    </ul>
+</nav>
+
+<script>
+$(document).ready(function() {
+    $("#menu-toggle").click(function() {
+        // Toggle effect hides and shows clickable. The perameter 1000 is the spead and the alert is the call back.
+        // $("#side-nav").toggle(1000, function() {
+        //     alert("Hi There");
+        // FadeTo effect fades in and out the clickable. The 0.5 perameter says the clickable will only fade out halfway or 0.5.
+            $("#side-nav").fadeTo(1000, 0.5, function() {
+                alert("Hi There")
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>
