@@ -28,6 +28,18 @@
     </ul>
 </nav>
 
+<div class="info-box">
+    <div class="info-title">
+        <p>Info Title!</p>
+    </div>
+    <div class="info-content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, optio dolore? 
+            Fugiat quisquam mollitia a aperiam laudantium cupiditate sunt ut ipsum sed quis. 
+            Doloremque repellat voluptatibus, non incidunt deserunt dolore!
+        </p>
+    </div>
+</div>
+
 <script>
 $(document).ready(function() {
     $("#menu-toggle").click(function() {
@@ -35,10 +47,15 @@ $(document).ready(function() {
         // $("#side-nav").toggle(1000, function() {
         //     alert("Hi There");
         // FadeTo effect fades in and out the clickable. The 0.5 perameter says the clickable will only fade out halfway or 0.5.
-            $("#side-nav").fadeTo(1000, 0.5, function() {
-                alert("Hi There")
+            $("#side-nav").slideToggle(1000);
             });
-        });
+
+            // I gave this paragraph a toggle sliding effect when you click the title. I gave the effect the perameter of slow wiht an alert.
+            $(".info-title").click(function() {
+                $(".info-content").slideToggle("slow", function() {
+                    alert("Hi There");
+                })
+            });
     });
 
 </script>
