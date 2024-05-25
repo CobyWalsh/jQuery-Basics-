@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text.css" href="style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".content-box").click(function() {
+                $(".content-box").animate({
+                   width: '500px',
+                //    += adds 200px to the height every time you click(works for minus as well -=).
+                   height: '+=200px' 
+                }, 1000);
+                // animated the text in box with an opacity of 1 and appears within 3 seconds when I click the content box.
+                $(".content-after").show().animate({opacity: '1'}, 3000);
+            });
+        });
+    </script>
 </head>
 <body>
-    
+   
+    <div class="content-box">
+        <p class="content-before">Click me to see more!</p>
+        <p class="content after">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere nam in atque? Quo, odio laboriosam et omnis architecto dolorum at ducimus, debitis autem ea suscipit libero laborum sed quia sapiente?</p>
+    </div>
+
 <header>
     <img id="menu-toggle" src="img/menu" alt="dummy menu">
 </header>
@@ -50,7 +69,7 @@ $(document).ready(function() {
             $("#side-nav").slideToggle(1000);
             });
 
-            // I gave this paragraph a toggle sliding effect when you click the title. I gave the effect the perameter of slow wiht an alert.
+            // I gave this paragraph a toggle sliding effect when you click the title. I gave the effect the perameter of slow wiht an alert
             $(".info-title").click(function() {
                 $(".info-content").slideToggle("slow", function() {
                     alert("Hi There");
