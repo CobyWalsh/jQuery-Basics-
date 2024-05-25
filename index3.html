@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="main.js"></script>></script>
-</head>
-<body>
-    
-</body>
-</html>
+    <link rel="stylesheet" type="text.css" href="style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        // This functions chains different animations to the content box instead of writing separate code for separate animations.
+        $(document).ready(function() {
+            $(".content-box").click(function() {
+                $(".content-box").animate({
+                   width:'500px',
+                   height: '400px'}, 3000).animate({
+                    fontSize: '30px'
+                }, 3000);
+            });
+            // This function stops the animation when I click on the stop animating button. The perameters stop the animation and the second perameter jumps to the finished animation.
+            $("button").click(function() {
+                $(".content-box").stop(true, true);
+            });
+
+        });
+    </script>
+    </head>
+
+    <body>
+        <button>Click me to STOP animating.</button>
+        <div class="content-box">
+            <p class="content-text">Click me to START animating.</p>
+        </div>
+    </body>
+    </html>
