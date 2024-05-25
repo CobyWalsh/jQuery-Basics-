@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            // This function shows an alert with the text of the button clicked.
+            $("btn1").click(function() {
+                alert($("test1").text());
+            });
+
+            $("btn2").click(function() {
+                alert($("test2").html());
+            });
+            // This function shows the value of the typed text in the alert when the input button is clicked.
+            $("btn3").click(function() {
+                alert($("test2").val());
+            });
+
+        });
+    </script>
+
+<script>
+    $(document).ready(function() {
+        // This function will change the text of test1 on the webpage and in the DOM.
+        $("btn1").click(function() {
+            $("test1").text("This is the new text");
+        });
+        // Changes the text to italic using <i></i>
+        $("btn2").click(function() {
+            $("test2").html("<i>This is the new text</i>");
+        });
+        // Changes the text in the text box.
+        $("btn3").click(function() {
+            $("test3").val("New input Data");
+        });
+
+    });
+</script>
+
+    <p id="test1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci officia quisquam possimus facere ducimus ipsum at quos aliquam neque, perspiciatis beatae quasi voluptatum quam nesciunt nemo. Mollitia repellat veniam placeat.</p>
+    <p id="test2"><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, cupiditate ipsa repudiandae expedita doloremque minima quas assumenda magnam et voluptatem eos voluptas quaerat quisquam praesentium temporibus ducimus, nesciunt, pariatur numquam.</b></p>
+    <input type="text" id="test3">
+
+    <button id="btn1">Text</button>
+    <button id="btn2">HTML</button>
+    <button id="btn3">Input</button>
+    
+</body>
+</html>
