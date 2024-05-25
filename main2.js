@@ -2,16 +2,16 @@ let viewLoginPwd = false;
 
 function changePwdView()
 {
-    let getPwdView = document.getElementById("viewPwdLogin");
+    let getPwdView = $("#viewPwdLogin");
 
     if (viewLoginPwd === false)
     {
-        getPwdView.setAttribute("type", "text");
+        getPwdView.attr("type", "text");
         viewLoginPwd = true;
     }
     else if (viewLoginPwd === true)
     {
-        getPwdView.setAttribute("type", "password");
+        getPwdView.attr("type", "password");
         viewLoginPwd = false;
     }
 }
